@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    margin: 0 auto;
+    
+}
+
+
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 62px auto;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 360px;
+}
+
+form h1{
+    padding: 8px 0;
+}
+
+form strong{
+    display: block;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #000;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.complemento{
+    display: flex;
+    max-width: 100%;
+    align-items: baseline;
+}
+
+.complemento input{
+    text-align: center;
+}
+
+.complemento label {
+    font-size: 14px;
+    padding-right: 4px;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.01);
+}
+
+label.error {
+    color: red;
+    font-size: 14px;
+}
+
+.error input,
+.error textarea {
+    border: 1px solid red;
+}
+
+.sucesso {
+    display: none;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 0;
+    margin: 8px 0;
+    text-align: center;
+}
+
+.erro {
+    display: none;
+    background-color: #ff2020;
+    color: #fff;
+    padding: 10px 2px;
+    margin: 8px 0;
+    text-align: center;
+}
