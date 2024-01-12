@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    background-color: #e8eb55;
+    padding: 16px 0;
+    color: #2e2e2e;
+    border-bottom: 2px solid #2e2e2e;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+body{
+    background-color: #f3f58a;
+}
+
+header h1{
+    font-size: 30px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-top: 30px;
+    padding-top: 8px;
+}
+
+.container input{
+    padding: 8px;
+    font-size: 16px;
+}
+
+.container button{
+    background-color: rgb(107, 245, 107);
+    padding: 9px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #2e2e2e;
+}
+
+.container button:hover{
+    transform: scale(1.01);
+}
+
+.container input:focus{
+    outline-color: rgb(75, 179, 75);
+}
+
+.container ul {
+    padding-left: 18px;
+    padding-top: 16px;
+}
+
+.container ul li{
+    font-size: 18px;
+    padding: 6px 0;
+}
+
+#lista-tarefas li:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+}
+
+.cancelado {
+    text-decoration: line-through;
+    }
