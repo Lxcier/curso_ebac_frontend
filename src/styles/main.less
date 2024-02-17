@@ -1,0 +1,227 @@
+@import "mixins.less";
+@import "maps.less";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1960px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    height: 100px;
+    border-bottom: 1px solid #colors[borda];
+    
+    nav {
+        height: 100%;
+        display: flex;
+    }
+    
+    .nav-container {
+    max-width: 1280px;
+    width: 100%;
+    .d-flex-v-center();
+    justify-content: space-between;
+
+    #title {
+        display: flex;
+        align-items: center;
+        gap: 8%;
+        font-size: 1.8em;
+        color: #colors[primaria];
+        transition: .3s;
+        cursor: pointer;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+
+    #navbar {
+        .d-flex ();
+        
+        .nav-item {
+            list-style: none;
+            padding: 0 18px;
+
+            .nav-link {
+                color: #colors[primaria];
+                gap: 8%;
+                text-decoration: none;
+                font-size: 20px;
+                transition: .2s;
+
+                &:hover {
+                    color: #colors[secundaria];
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+}
+
+#main-banner {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: 520px;
+    background: url(https://cdn.pixabay.com/photo/2017/07/28/14/23/macarons-2548810_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 3%;
+    border-bottom: 1px solid #colors[borda];
+
+    h1{
+        color: #colors[primaria];
+        font-size: 3em;
+        text-transform: uppercase;
+        background-color: #fff;
+        padding: 6px 0;
+    }
+
+    p {
+        color: #colors[primaria];
+        font-size: 1.2em;
+        background-color: #fff;
+        padding-bottom: 8px;
+    }
+}
+
+#sobre {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #colors[borda];
+
+    #descricao {
+        text-align: center;
+        max-width: 520px;
+        width: 100%;
+        margin-bottom: 80px;
+
+
+        h2 {
+            margin-top: 80px;
+            margin-bottom: 16px;
+            font-size: 2em;
+            color: #colors[primaria];
+            text-transform: uppercase;
+        }
+
+        p {
+            text-align: center;
+            color: #colors[secundaria];
+            font-size: 18px;
+            padding: 2px 12px;
+            
+        }
+    }
+}
+
+#contato {
+    display: flex;
+    justify-content: center;
+    background: url(https://cdn.pixabay.com/photo/2015/05/07/15/08/cookie-756601_960_720.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    .vinheta {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+    }
+
+    #form {
+        margin-top: 80px;
+        margin-bottom: 80px;
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            font-size: 2em;
+            color: #colors[secundaria];
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        
+        form {
+            .name-mail {
+                display: flex;
+
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 18px;
+                }
+            }
+
+            .msg-form {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 18px;
+
+                    textarea {
+                        height: 124px;
+                    }
+            }
+            
+
+            label {
+                font-size: 1.2em;
+                color: #colors[secundaria];
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+            
+            input, textarea{
+                border: none;
+                padding: 12px;
+                border-radius: 4px;
+                margin-top: .5em;
+                width: 100%;
+                resize: none;
+
+                &::placeholder {
+                    text-align: center;
+                    justify-content: center;
+                    text-transform: uppercase;
+                }
+            }
+
+            .botao {
+                display: flex;
+                justify-content: end;
+                button {
+                    padding: 8px;
+                    border: 1px solid #colors[secundaria];
+                    background-color: transparent;
+                    color: #colors[secundaria];
+                    width: 120px;
+                    margin: 18px;
+                    justify-content: end;
+                    transition: .2s;
+                    cursor: pointer;
+
+                    &:hover {  
+                        background-color: #colors[secundaria];
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
