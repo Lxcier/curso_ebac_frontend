@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Github</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img id="avatar" class="profile-avatar" src="https://via.placeholder.com/180x180" alt=".">
+            <h1 id="name" class="profile-name">Lucas Lucier</h1>
+            <h2 id="username" class="profile-username">@lxcier</h2>
+            <ul class="numbers">
+                <li class="numbers-item">
+                    <h4>Repositórios</h4>
+                    <span id="repositories">5</span>
+                </li>
+                <li class="numbers-item">
+                    <h4>Seguidores</h4>
+                    <span id="followers">5</span>
+                </li>
+                <li class="numbers-item">
+                    <h4>Seguindo</h4>
+                    <span id="following">5</span>
+                </li>
+            </ul>
+            <a href="#" id="github_link" class="profile-link" target="_blank">Ver no Github</a>
+        </div>
+    </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const name = document.getElementById('name');
+            const username = document.getElementById('username');
+            const avatar = document.getElementById('avatar')
+            const repositories = document.getElementById('repositories');
+            const followersNumber = document.getElementById('followers');
+            const followingNumber = document.getElementById('following');
+            const link = document.getElementById('github_link');
+            const endpoint = "https://api.github.com/users/lxcier";
+
+            
+
+            fetch(endpoint)
+            .then(function(resposta){
+                return resposta.json();
+            })
+            .then(function(json){
+                console.log(json);
+
+                name.innerText = json.name;
+                username.innerText = json.login;
+                avatar.src = json.avatar_url;
+                repositories.innerText = json.public_repos;
+                followersNumber.innerText = json.followers;
+                followingNumber.innerText = json.following;
+                link.href = json.html_url;
+            })
+        })
+    </script>
+</body>
+</html>
